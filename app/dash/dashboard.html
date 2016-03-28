@@ -1,0 +1,75 @@
+<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Sales App</span>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                    <i class="material-icons">search</i>
+                </label>
+
+                <!-- Search field -->
+                <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input" type="text" id="search">
+                    <label class="mdl-textfield__label" for="search">Enter your query...</label>
+                </div>
+            </div>
+
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+                <i class="material-icons">more_vert</i>
+            </button>
+
+            <!-- ripple button effects -->
+            <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+                <li class="mdl-menu__item">About</li>
+                <li (click)="logoutUser()" class="mdl-menu__item">Logout</li>
+            </ul>
+        </div>
+
+    </header>
+
+    <!-- App Drawer Contents -->
+    <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+
+        <header class="demo-drawer-header">
+            <img src={{imagePath}} class="demo-avatar">
+            <div class="demo-avatar-dropdown">
+
+                <!-- TODO : Fetch username and set here {{username}} -->
+                <span><b>{{userFullname}}</b></span>
+                <div class="mdl-layout-spacer"></div>
+
+               <!-- <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button&#45;&#45;icon">
+                    <i class="material-icons" role="presentation">arrow_drop_down</i>
+                    <span class="visuallyhidden">Accounts</span>
+                    <span class="visuallyhidden">Sign out</span>
+                </button>   TODO : Add some more here..!
+-->              <!-- User profile view and logout option -->
+                <!--<ul class="mdl-menu mdl-menu&#45;&#45;bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">-->
+                    <!--<li class="mdl-menu__item">Logout</li>-->
+                <!--</ul>-->
+            </div>
+        </header>
+
+        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+            <!-- Tree View for each -->
+
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">credit_card</i>Tab View</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">receipt</i>Grid</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">assignment</i>Form</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">line_weight</i>Tree</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">view_day</i>Accordion</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">view_carousel</i>Carousel</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">date_range</i>Calendar</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">pie_chart</i>Charts</a>
+            <div class="mdl-layout-spacer"></div>
+
+        </nav>
+    </div>
+    <main class="mdl-layout__content mdl-color--grey-100">
+
+           <!-- Home Content goes here -->
+        <router-outlet></router-outlet>
+
+    </main>
+</div>

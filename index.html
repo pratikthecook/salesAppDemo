@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>App</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Minified JS Libs Angular 2 -->
+    <script src="beta9/es6-shim.min.js"></script>
+    <script src="beta9/system-polyfills.js"></script>
+
+    <script src="beta9/angular2-polyfills.min.js"></script>
+    <script src="beta9/system.js"></script>
+    <script src="beta9/typescript.min.js"></script>
+    <script src="beta9/Rx.min.js"></script>
+    <script src="beta9/angular2.dev.js"></script>
+    <script src="beta9/http.dev.js"></script>
+    <script src="beta9/web-api.js"></script>
+    <script src="beta9/router.js"></script>
+
+    <script src="beta9/firebase.js"></script>
+
+    <!-- Material Design Lite -->
+    <link rel="stylesheet" href="MDL/material.css">
+    <script src="MDL/material.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Configuration -->
+    <script>
+        System.config({
+            transpiler: 'typescript',
+            typescriptOptions: { emitDecoratorMetadata: true },
+            packages: {'app': {defaultExtension: 'ts'}}
+        });
+        System.import('app/boot')
+                .then(null, console.error.bind(console));
+    </script>
+
+</head>
+<body>
+    <my-app>
+        <div class="spinner">
+            <div class="mdl-spinner mdl-js-spinner is-active"></div>
+        </div>
+    </my-app>
+</body>
+</html>

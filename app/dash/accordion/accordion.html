@@ -1,0 +1,32 @@
+<div class="ui-grid-col-6">
+    <h3>Simple Accordion</h3>
+    <p-accordion>
+        <p-accordionTab header="Header 1" [selected]="true">
+            Content 1
+        </p-accordionTab>
+        <p-accordionTab header="Header 2">
+            Content 2
+        </p-accordionTab>
+        <p-accordionTab header="Header 3">
+            Content 3
+        </p-accordionTab>
+    </p-accordion>
+</div>
+
+<div class="ui-grid-col-6">
+    <h3>Multiple Open </h3>
+    <p-accordion [multiple]="true">
+        <p-accordionTab header="Header 1">
+            Content 1
+        </p-accordionTab>
+        <p-accordionTab header="Header 2">
+            Content 2
+        </p-accordionTab>
+        <p-accordionTab header="Header 3">
+            Content 3
+        </p-accordionTab>
+        <p-accordionTab header="Header 4" [disabled]="true">
+            Content 4
+        </p-accordionTab>
+    </p-accordion>
+</div>
